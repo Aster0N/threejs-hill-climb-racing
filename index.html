@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three game</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="controls">
+        <button id="settings-btn">
+          <img src="/public/settings-2.svg" alt="настройки" />
+        </button>
+        <button id="guide-btn">
+          <img src="/public/circle-help.svg" alt="как играть" />
+        </button>
+      </div>
+
+      <div id="settings-popup" class="popup">
+        <div class="popup-content">
+          <label for="point-light-control">
+            солнце
+            <input type="checkbox" id="point-light-control" checked />
+          </label>
+          <label for="fog-control">
+            туман
+            <input type="checkbox" id="fog-control" />
+          </label>
+        </div>
+      </div>
+
+      <div id="guide-popup" class="popup">
+        <div class="popup-content">
+          <p class="guide-label">
+            Движение<br />
+            <img src="/public/movement.svg" alt="передвижение" />
+          </p>
+          <p class="guide-label">
+            Вращать камеру<br />
+            <img src="/public/camera.svg" alt="камера" />
+          </p>
+          <p class="guide-label">
+            Приближение камеры<br />
+            <img src="/public/zoom.svg" alt="приближение" />
+          </p>
+          <button class="close-btn">Понятно</button>
+        </div>
+      </div>
+      <canvas id="canvas"></canvas>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
